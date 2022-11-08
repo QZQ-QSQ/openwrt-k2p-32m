@@ -16,7 +16,6 @@
 # Add Custom feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-echo 'src-git helloworld https://github.com/fw876/helloworld.git' >> 'feeds.conf.default'
 echo 'src-git OpenClash https://github.com/vernesong/OpenClash' >> 'feeds.conf.default'
 ####### Replace with JerryKuKu’s Argon
 #rm openwrt/package/lean/luci-theme-argon -rf #delete original argon theme
