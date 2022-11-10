@@ -37,7 +37,4 @@ sed -i 's/"Phicomm K2P";/"Phicomm K2P (32M)";/g' target/linux/ramips/dts/mt7621_
 sed -i 's/<80000000>/<10000000>/g' target/linux/ramips/dts/mt7621_phicomm_k2p.dts
 sed -i 's/m25p,fast-read;/broken-flash-reset;/g' target/linux/ramips/dts/mt7621_phicomm_k2p.dts
 sed -i 's/<0xa0000 0xf60000>/<0xa0000 0x1f60000>/g' target/linux/ramips/dts/mt7621_phicomm_k2p.dts
-sed -i '$a &sdhci {
-	status = "okay";
-	mediatek,cd-low;
-};' target/linux/ramips/dts/mt7621_phicomm_k2p.dts
+sed -i '$a &sdhci {status = "okay";mediatek,cd-low;};' target/linux/ramips/dts/mt7621_phicomm_k2p.dts
