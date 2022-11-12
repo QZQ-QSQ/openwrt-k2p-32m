@@ -33,9 +33,9 @@ echo 'src-git OpenClash https://github.com/vernesong/OpenClash.git' >> 'feeds.co
 #cd ..
 
 ###### K2P-32M修改编译文件 ######
+
 sed -i 's/15744k/32128k/g' target/linux/ramips/image/mt7621.mk
 sed -i 's/"Phicomm K2P";/"Phicomm K2P (32M)";/g' target/linux/ramips/dts/mt7621_phicomm_k2p.dts
 sed -i 's/<80000000>/<10000000>/g' target/linux/ramips/dts/mt7621_phicomm_k2p.dts
 sed -i 's/m25p,fast-read;/broken-flash-reset;/g' target/linux/ramips/dts/mt7621_phicomm_k2p.dts
 sed -i 's/<0xa0000 0xf60000>/<0xa0000 0x1f60000>/g' target/linux/ramips/dts/mt7621_phicomm_k2p.dts
-sed -i '$a &sdhci {status = "okay";mediatek,cd-low;};' target/linux/ramips/dts/mt7621_phicomm_k2p.dts
